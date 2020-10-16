@@ -18,3 +18,25 @@ If you create a new file, and you didn't add it to the main branch, when you do 
 - Now after you've added the changes, you can check that they're added by doing "git status" again. After that, they will need to be committed so, commit any changes writing on Terminal git commit -m "Added index.html" -m "some description"
 
 The first -m "" is the main message or the header of the commit, and the second -m "" which is optional is the description (-m means message)
+
+# Commands
+
+git config --global user.name "Your Name"
+
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+git status
+
+git clone [link]
+
+git add .
+
+git add [filename]
+
+git commit -m "Title"
+
+git commit -m "Title" -m "Here is some description"
