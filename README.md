@@ -29,7 +29,8 @@ The first -m "" is the main message or the header of the commit, and the second 
 To add the public key you copy your ssh key and add it in GitHub
 
 - Now there's one more step, (google adding ssh key to ssh-agent, and do that step)
-- After that, you can push all your changes to the master branch by "git push origin master"
+- After that, you can push all your changes to the master branch by "git push origin main" 
+
 
 # Commands
 
@@ -49,17 +50,29 @@ To check your username and email
 
     git config --global user.email
 
-git status
+To check the status of your changes
 
-git clone [link]
+    git status
 
-git add .
+Clone a repository into a new directory
 
-git add [filename]
+    git clone [link]
 
-git commit -m "Title"
+Add all the changes you did
 
-git commit -m "Title" -m "Here is some description"
+    git add .
+
+Add a change you did
+
+    git add [filename]
+
+Commit the changes you did (using title only)
+
+    git commit -m "Title"
+
+Commit the changes you did (using title and description)
+
+    git commit -m "Title" -m "Here is some description"
 
 I want to push this live to a remote repository where my project is hosted (master branch)
 
