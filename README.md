@@ -69,6 +69,34 @@ To switch between branches, you also use
     git checkout [branchname]
     git checkout main
 
+To push changes from your new branch to GitHub (we are setting the new upstream to the new branch, so whenever you <git push> you are pushing to the new branch)
+    git push -u origin [branchname]
+    git push -u origin feature-readme-instructions
+
+What is a Pull Request? (also Called PR)
+- it is a request to have your code pulled into another branch. For example, pulling code from my new branch to the main branch
+- once the PR is done, anyone can review it, and ask us to make changes or updates.
+- once you make the PR, you can still make changes by comitting to that same branch that did the PR. But generally, once the PR is merged, you will delete your branch or feature. Then when you want to make additional changes, you will create a new branch, and start the same procedure over again. (new branch, do changes, commit, new PR, etc...)
+
+Usually the PR request should say the changes you have made and why you did them (in a list format)
+
+In the GitHub interface: 
+- you can see everything about the Pull Request including commits, comments, and more.
+- you can comment specifically on any code and see any comments from other people
+
+After the you merge the main branch with the feature branch, you should see the changes of the feature branch applied to the main branch.
+
+Now to get the most recent changes that you did to your main branch which is not updated locally (on your local machine), you will do
+    git pull
+    git pull origin master
+
+After you are done from the branch, you will probably delete it (because you don't usually reuse merged branches),so to do that you would type
+    git branch -d feature-readme-instructions
+
+## Forking
+
+Forking is creating a copy of someone's repository to your GitHub account.
+- You can contribute to someone's project. Take the original project, add some code, and then create a pull request to merge that code to the original project.
 
 ## Commands
 
@@ -124,3 +152,36 @@ and now everytime you push you can just type
 List, delete, or create branches
     git branch
 
+To update your files that were committed or had some changes on GitHub on your local machine, you do
+    git pull origin master
+    git pull
+
+To delete a branch 
+    git branch -d [branchname]
+    git branch -d feature-readme-instructions
+
+Shortcut for adding (adding changes) and commiting modified files [includes the add command in the commit command, and this only works for modified files ]
+    git commit -am "Message"
+
+To merge with main branch
+    git merge main
+
+To see the difference between the branch you are in and another branch
+    git diff [otherbranchname]
+
+Sometimes you want to undo a change that you added (these both have same meaning)
+    git reset
+    git reset README.md
+
+If you want to undo a commit that you just made
+    git reset HEAD~1
+
+To see all the commits that you did
+    git log
+
+To delete one of the commits that you made, you first want to look at its hash number from "git log" and then do
+    git reset [hashnumber]
+(This will unstage the commit, which means the commit will no longer be in git, but all the changes wont go away, we are just removing the commit)
+
+To remove all changes of a commit
+    git reset --hard [hashnumber]
