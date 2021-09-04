@@ -184,4 +184,5 @@ To delete one of the commits that you made, you first want to look at its hash n
 (This will unstage the commit, which means the commit will no longer be in git, but all the changes wont go away, we are just removing the commit)
 
 To remove all changes of a commit
+    
     `git reset --hard [hashnumber]`
