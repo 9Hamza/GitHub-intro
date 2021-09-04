@@ -145,44 +145,58 @@ I want to push this live to a remote repository where my project is hosted (mast
     git push origin main
 
 To not write all of this ^ everytime, you can do 
-    `git push -u origin main`
+    
+    git push -u origin main
+    
 and now everytime you push you can just type   
-    `git push`
+    
+    git push
 
 List, delete, or create branches
-    `git branch`
+    
+    git branch
 
 To update your files that were committed or had some changes on GitHub on your local machine, you do
-    `git pull origin master`
-    `git pull`
+    
+    git pull origin master
+    git pull
 
 To delete a branch 
-    `git branch -d [branchname]`
-    `git branch -d feature-readme-instructions`
+    
+    git branch -d [branchname]
+    git branch -d feature-readme-instructions
 
 Shortcut for adding (adding changes) and commiting modified files [includes the add command in the commit command, and this only works for modified files ]
-    `git commit -am "Message"`
+    
+    git commit -am "Message"
 
 To merge with main branch
-    `git merge main`
+    
+    git merge main
 
 To see the difference between the branch you are in and another branch
-    `git diff [otherbranchname]`
+    
+    git diff [otherbranchname]
 
 Sometimes you want to undo a change that you added (these both have same meaning)
-    `git reset`
-    `git reset README.md`
+    
+    git reset
+    git reset README.md
 
 If you want to undo a commit that you just made
-    `git reset HEAD~1`
+    
+    git reset HEAD~1
 
 To see all the commits that you did
-    `git log`
+    
+    git log
 
 To delete one of the commits that you made, you first want to look at its hash number from "git log" and then do
-    `git reset [hashnumber]`
+    
+    git reset [hashnumber]
+    
 (This will unstage the commit, which means the commit will no longer be in git, but all the changes wont go away, we are just removing the commit)
 
 To remove all changes of a commit
     
-    `git reset --hard [hashnumber]`
+    git reset --hard [hashnumber]
